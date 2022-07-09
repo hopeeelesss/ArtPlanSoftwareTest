@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <div class="greeting">Welcome!</div>
+    <div class="pet-container">
+        <div>
+            <a href="/" th:href="@{/pet/new}">Create pet</a>
+        </div>
+        <div>
+            Update
+        </div>
+        <div>
+            Delete
+        </div>
+        <div>
+            <a href="/" th:href="@{/pet/list}">List of your pets</a>
+        </div>
+        <div>
+            FindPetById
+        </div>
+    </div>
+    <a sec:authorize="isAuthenticated()" th:href="@{/logout}">Logout</a>
+</body>
+</html>
