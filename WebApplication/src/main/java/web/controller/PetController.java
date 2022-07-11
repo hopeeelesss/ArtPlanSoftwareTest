@@ -36,6 +36,6 @@ public class PetController {
     @GetMapping("list")
     public String list(Model model){
         model.addAttribute("petList",petService.list());
-        return "pet/list";
+        return "list";
     }
 }
